@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake</title>
+    <style>
+        body { 
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            background-color: white;
+        }
+    
+        #gameBoard {
+            background-color: #121212;
+            width: 100vmin;
+            height: 100vmin;
+            display: grid;
+            grid-template-rows: repeat(21,1fr);
+            grid-template-columns: repeat(21,1fr);
+         
+            
+
+        
+        }
+        
+        .snake  { 
+            background-color: white;;
+            border: .25vmin solid black;
+            border-radius:  50%;
+        }
+
+        .snake:nth-child(1)
+        {   
+            border-radius: 25%;
+            background-color: skyblue;
+            border: .25vmin solid black;
+            z-index: 1;
+        }
+
+        .food  { 
+            background-color:red;
+            border: .25vmin solid black;
+            border-radius: 50%;
+        }
+        
+        #score  { 
+            font-size: 18px;
+            position: absolute;
+            display: block;
+            text-align: center;
+            padding: 0;
+            top: 0;
+            color:  white;
+            z-index: 2;
+        }
+    </style>
+    <script src="game.js" defer type="module"></script>
+</head>
+
+<body>
+        
+        <p id="score">Score: 0</p>
+    <div id="gameBoard"></div>
+</body>
+</html>
